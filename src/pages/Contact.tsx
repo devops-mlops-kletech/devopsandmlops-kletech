@@ -51,7 +51,7 @@ const Contact = () => {
                   <Input
                     id="name"
                     type="text"
-                    placeholder="John Doe"
+                    placeholder=""
                     required
                     className="bg-background border-border"
                   />
@@ -64,7 +64,7 @@ const Contact = () => {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder=""
                     required
                     className="bg-background border-border"
                   />
@@ -123,10 +123,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:devops@kletech.ac.in"
+                      href="mailto:devopsmlops.kletech@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      devops@kletech.ac.in
+                      devopsmlops.kletech@gmail.com
                     </a>
                   </div>
                 </div>
@@ -138,10 +138,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <a
-                      href="tel:+918362425000"
+                      href="tel:+918861606007"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +91 836 242 5000
+                      +91 8861606007
                     </a>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-muted-foreground">
-                      KLE Technological University<br />
+                      CLITE, KLE Technological University<br />
                       Hubballi, Karnataka 580031<br />
                       India
                     </p>
@@ -162,14 +162,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-2xl p-8 border border-border">
-              <h3 className="text-2xl font-bold mb-4">Office Hours</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Monday - Friday: 2:00 PM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 2:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
-            </div>
+            
           </motion.div>
         </div>
       </div>

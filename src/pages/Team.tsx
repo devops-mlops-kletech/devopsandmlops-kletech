@@ -3,48 +3,36 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Team = () => {
   const facultyAdvisor = {
-    name: "Dr. Rajesh Kumar",
-    role: "Faculty Advisor",
-    department: "Computer Science & Engineering",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=advisor",
+    name: "Dr. Narayan D G",
+    role: "Head of the Department",
+    department: "Computer Science & Engineering (AI)",
+    image: "",
   };
 
   const coreMembers = [
     {
-      name: "Priya Sharma",
-      role: "Club President",
-      year: "Final Year",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=priya",
-    },
-    {
-      name: "Arjun Patel",
-      role: "Technical Lead",
+      name: "Rishi Kulkarni",
+      role: "",
       year: "Third Year",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=arjun",
+      image: "",
     },
     {
-      name: "Sneha Reddy",
-      role: "Events Coordinator",
+      name: "Sparsh Naik",
+      role: "",
       year: "Third Year",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=sneha",
+      image: "",
     },
     {
-      name: "Rahul Singh",
-      role: "Cloud Lead",
+      name: "Amaan Ali Doddamani",
+      role: "",
       year: "Third Year",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=rahul",
+      image: "",
     },
     {
-      name: "Ananya Iyer",
-      role: "MLOps Lead",
-      year: "Second Year",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=ananya",
-    },
-    {
-      name: "Karthik Menon",
-      role: "Content & Social Media",
-      year: "Second Year",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=karthik",
+      name: "Simran Kalkeri",
+      role: "",
+      year: "Third Year",
+      image: "",
     },
   ];
 
@@ -106,7 +94,7 @@ const Team = () => {
         {/* Core Team */}
         <div>
           <h2 className="text-3xl font-bold text-center mb-12">Core Team</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {coreMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -116,7 +104,7 @@ const Team = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-all">
+                <div className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-all h-full flex flex-col">
                   <div className="relative inline-block mb-4">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <img
@@ -125,28 +113,34 @@ const Team = () => {
                       className="relative w-24 h-24 rounded-full mx-auto border-2 border-border group-hover:border-primary/50 transition-all"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary font-semibold text-sm mb-1">{member.role}</p>
-                  <p className="text-muted-foreground text-sm mb-4">{member.year}</p>
-                  <div className="flex justify-center gap-2">
-                    <a
-                      href="#"
-                      className="w-9 h-9 rounded-lg bg-muted hover:bg-primary/10 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
-                    >
-                      <Github className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-9 h-9 rounded-lg bg-muted hover:bg-primary/10 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
-                    >
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-9 h-9 rounded-lg bg-muted hover:bg-primary/10 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
-                    >
-                      <Mail className="w-4 h-4" />
-                    </a>
+                  <div className="flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold mb-1 leading-tight min-h-[3rem] flex items-center justify-center">
+                        <span className="break-words">{member.name}</span>
+                      </h3>
+                      <p className="text-primary font-semibold text-sm mb-1 min-h-[1.25rem]">{member.role}</p>
+                      <p className="text-muted-foreground text-sm mb-4">{member.year}</p>
+                    </div>
+                    <div className="flex justify-center gap-2 mt-auto">
+                      <a
+                        href="#"
+                        className="w-9 h-9 rounded-lg bg-muted hover:bg-primary/10 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
+                      <a
+                        href="#"
+                        className="w-9 h-9 rounded-lg bg-muted hover:bg-primary/10 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </a>
+                      <a
+                        href="#"
+                        className="w-9 h-9 rounded-lg bg-muted hover:bg-primary/10 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
+                      >
+                        <Mail className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </motion.div>

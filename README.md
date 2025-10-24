@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+# DevOps & MLOps Club Website
 
-## Project info
+Official website for the DevOps & MLOps Club at KLE Technological University.
 
-**URL**: https://lovable.dev/projects/1b7e2d26-d43d-4d2c-aea3-ebfe4fa5c49d
+## About
 
-## How can I edit this code?
+Building the Cloud-Native Future at KLE Tech. Empowering students with real-world DevOps and MLOps skills through hands-on workshops, industry partnerships, and cutting-edge projects.
 
-There are several ways of editing your application.
+## Development Setup
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1b7e2d26-d43d-4d2c-aea3-ebfe4fa5c49d) and start prompting.
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:8080` with hot-reload enabled.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Tech Stack
 
-**Use GitHub Codespaces**
+This project is built with modern web technologies:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI library with hooks and modern patterns
+- **shadcn/ui** - Beautiful and accessible UI components
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **Framer Motion** - Smooth animations and transitions
 
-## What technologies are used for this project?
+## Available Scripts
 
-This project is built with:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+The site is configured for GitHub Pages deployment with the base path `/devopsandmlops-kletech/`. 
 
-Simply open [Lovable](https://lovable.dev/projects/1b7e2d26-d43d-4d2c-aea3-ebfe4fa5c49d) and click on Share -> Publish.
+To deploy:
+1. Run `npm run build` to create the production build
+2. Deploy the `dist` folder to your hosting platform
 
-## Can I connect a custom domain to my Lovable project?
+## Contributing
 
-Yes, you can!
+We welcome contributions from club members! Please follow these steps:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request

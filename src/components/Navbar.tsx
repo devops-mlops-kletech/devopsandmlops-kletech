@@ -10,7 +10,6 @@ const Navbar = () => {
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Roadmap", path: "/roadmap" },
     { name: "Events", path: "/events" },
     { name: "Team", path: "/team" },
     { name: "Partners", path: "/partners" },
@@ -26,7 +25,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <Cloud className="w-8 h-8 text-primary group-hover:animate-pulse" />
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              DevOps Club
+              DevOps and MLOps Club - KLETECH
             </span>
           </Link>
 
