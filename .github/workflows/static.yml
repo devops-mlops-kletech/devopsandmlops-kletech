@@ -1,45 +1,45 @@
 name: Deploy React App to GitHub Pages
-
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm ci
 
-      - name: Build project
-        run: npm run build
+      - name: Build React app
+        run: |
+          npm run build
+        env:
+          CI: false
 
-      - name: Upload production-ready files
-        uses: actions/upload-pages-artifact@v3
+      - name: Verify build directory
+        run: |
+          if [ ! -d "./build" ]; then
+            echo "ERROR: build directory not found. npm run build likely failed."
+            ls -la
+            exit 1
+          fi
+
+      - name: Archive artifact
+        run: |
+          tar -czf build.tar.gz build
+        # if you want to keep an artifact in Actions UI too:
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: ./build
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          name: react-build
+          path: build
